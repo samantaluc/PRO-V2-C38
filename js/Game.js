@@ -45,13 +45,13 @@ class Game {
     if (allPlayers !== undefined) {
       image(track, 0, -height * 5, width, height * 6);
 
-      //index of the array
+      //índice da matriz
       var index = 0;
       for (var plr in allPlayers) {
-        //add 1 to the index for every loop
+        //adicione 1 ao índice para cada loop
         index = index + 1;
 
-        //use data form the database to display the cars in x and y direction
+        //use os dados do banco de dados para exibir os carros nas direções x e y
         var x = allPlayers[plr].positionX;
         var y = height - allPlayers[plr].positionY;
 
@@ -63,7 +63,7 @@ class Game {
           fill("red");
           ellipse(x, y, 60, 60);
 
-          // Changing camera position in y direction
+          //alterar a posição da câmera na direção y
           camera.position.x = cars[index - 1].position.x;
           camera.position.y = cars[index - 1].position.y;
         }
@@ -76,7 +76,7 @@ class Game {
   }
 
   handlePlayerControls() {
-    // handling keyboard events
+    // manipulando eventos de teclado
     if (keyIsDown(UP_ARROW)) {
       player.positionY += 10;
       player.update();
