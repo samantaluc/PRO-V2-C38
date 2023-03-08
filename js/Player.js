@@ -28,9 +28,9 @@ class Player {
       life: this.life
     });
   }
-
+//metodo para obter a distancia que o jogador está transcorrendo
   getDistance() {
-    var playerDistanceRef = database.ref("players/player" + this.index);
+    var playerDistanceRef = database.ref("players/player" + this.index); //referencia o jogador pelo indice a que foi add
     playerDistanceRef.on("value", data => {
       var data = data.val();
       this.positionX = data.positionX;
