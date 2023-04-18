@@ -43,13 +43,14 @@ class Game {
         var y = height - allPlayers[plr].positionY;
         cars[index - 1].position.x = x;
         cars[index - 1].position.y = y;
-        //identificar o jogador de acordo com o indice ativo usando um circulo de cor vermelha
+        //identificar o jogador de acordo com o indice ativo usando um circulo de cor vermelha ---- C38
         if (index === player.index) {
-          stroke(10); //contorno tamanho 10
-          fill("red"); //preenche cor vermelha
-          ellipse(x, y, 60, 60); //cria uma forma circular de tamanho 60 por 60
-          //alterar a posição da câmera na direção y seguindo o jogador ativo do indice
+          stroke(10); //contorno tamanho 10 ---- C38
+          fill("red"); //preenche cor vermelha ---- C38
+          ellipse(x, y, 60, 60); //cria uma forma circular de tamanho 60 por 60 ---- C38
+          //alterar a posição da câmera na direção x seguindo o jogador ativo do indice ---- C38
           camera.position.x = cars[index - 1].position.x;
+          //alterar a posição da câmera na direção y seguindo o jogador ativo do indice ---- C38
           camera.position.y = cars[index - 1].position.y;
         }
       }
