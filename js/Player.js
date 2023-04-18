@@ -28,10 +28,13 @@ class Player {
       life: this.life
     });
   }
-//metodo para obter a distancia que o jogador está transcorrendo
+//metodo para obter a distancia que o jogador está transcorrendo ---- C38 
   getDistance() {
-    var playerDistanceRef = database.ref("players/player" + this.index); //referencia o jogador pelo indice a que foi add
+    //referencia o jogador pelo indice a que foi adicionado
+    var playerDistanceRef = database.ref("players/player" + this.index); 
+    //onde será procurado o valor a ser modificado/lido pelo jogo
     playerDistanceRef.on("value", data => {
+      //os dados viram do VALOR do Banco de Dados como posição X e posição Y
       var data = data.val();
       this.positionX = data.positionX;
       this.positionY = data.positionY;
