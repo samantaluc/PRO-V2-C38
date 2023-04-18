@@ -39,7 +39,7 @@ class Form {
       player.index = playerCount;
       player.addPlayer();
       player.updateCount(playerCount);
-      player.getDistance();
+      player.getDistance(); // irá chamar a função de obter a distancia e posição do arquivo Player.js --- C38
     });
   }
 
